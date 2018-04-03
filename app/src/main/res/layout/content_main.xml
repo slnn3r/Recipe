@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.user.recipe.View.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/textViewHeaderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewHeader"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="23dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="23dp" />
+
+    <TextView
+        android:id="@+id/textViewTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipeTypeLabel"
+        android:layout_marginLeft="23dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderView"
+        android:layout_marginStart="23dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTypeView"
+        android:layout_width="156dp"
+        android:layout_height="25dp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewTypeLabel"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderView"
+        android:layout_marginStart="16dp" />
+
+    <ListView
+        android:id="@+id/recipeList"
+        android:layout_width="337dp"
+        android:layout_height="388dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="23dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_editor_absoluteY="94dp" />
+
+
+</android.support.constraint.ConstraintLayout>

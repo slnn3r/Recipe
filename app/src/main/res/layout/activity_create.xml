@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.recipe.View.CreateActivity">
+
+    <TextView
+        android:id="@+id/textViewNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/recipeNameLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderCreate"
+        android:layout_marginStart="42dp" />
+
+    <TextView
+        android:id="@+id/textViewHeaderCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createHeader"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:id="@+id/recipeNameFieldCreate"
+        android:layout_centerHorizontal="true"
+        android:background="?attr/actionModeBackground"
+        android:hint="eg. Fruit juice"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeaderCreate"
+        app:layout_constraintLeft_toRightOf="@+id/textViewNameLabel"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipeTypeLabel"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameLabel"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="46dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTypeCreate"
+        android:layout_width="234dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/recipeNameFieldCreate"
+        app:layout_constraintLeft_toRightOf="@+id/textViewTypeLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewIngredientLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipeIngredientLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTypeLabel" />
+
+    <EditText
+        android:id="@+id/ingredientFieldCreate"
+        android:hint="eg. Apple, Water, Sugar"
+        android:layout_width="234dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintLeft_toRightOf="@+id/textViewIngredientLabel"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeCreate"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewStepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipeStepLabel"
+        android:layout_marginLeft="42dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="130dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIngredientLabel" />
+
+    <EditText
+        android:id="@+id/stepFieldCreate"
+        android:hint="eg.\n1. Slice the Apple\n\n2. Add Put Sliced Apple and Water to Juice Machine\n\n3. Blended them for few seconds\n\n4. Add Sugar"
+
+        android:layout_width="234dp"
+        android:layout_height="236dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientFieldCreate"
+        app:layout_constraintLeft_toRightOf="@+id/textViewStepLabel"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/textViewStepLabel"
+        android:layout_alignStart="@+id/textViewStepLabel"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCreate"
+        android:onClick="create"
+        android:textStyle="bold"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:text="@string/createButton"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/stepFieldCreate"
+        android:layout_marginLeft="125dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
