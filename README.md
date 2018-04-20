@@ -160,7 +160,7 @@ In this project, Model solely deal with the implementations to retrieve data fro
         }
 
 
-###### **Highlights:**
+**Highlights:**
 
 From the MVP flow example above, you can clearly see that each Layer perform their task specifically and seperately. Where the View Layer solely used to perform user interface functionality that to display thing on the screen. Presenter Layer act as the middle man of View and Model to create a connection which help to receive request from View Layer and send the response of Model Layer back to the View Layer. Lastly, Model Layer is the place to solely deal with retrieving of data from the Database and send back the requested data upon request.
 
